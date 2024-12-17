@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #fcf5c9;
+    --container-normal: 1100px;
+    --container-large: 1400px;
+    --container-small: 900px;
+    --dark-color:#333;
+}
+
+body{
+    font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Utility Classes */
+.bg-primary{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.6rem;
+}
+
+.bg-dark{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.bg-dark .bg-primary{
+    padding: 0 0.3rem;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+/* Container */
+.container{
+    max-width: var(--container-normal);
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.container-lg{
+    max-width: var(--container-large);
+}
+
+.container-sm{
+    max-width: var(--container-small);
+}
+/* Header */
+
+.header{
+    margin: 1.5rem auto;
+}
+.header .logo{
+    width: 130px;
+}
+.header .header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .main-menu{
+    display: flex;
+    gap: 1rem;
+}
+
+.header .main-menu a{
+    padding: 0.5rem 1rem;
+}
+.header .main-menu a:hover{
+    background-color: var(--primary-color);
+}
+
+.current{
+    background-color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Hero text */
+.hero{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2{
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+
+/* Gallery */
+
+.gallery-flex{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item{
+    width: calc(33.33% - 20px);
+}
+
+.gallery-item img{
+    border-radius: 10px;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+/* Footert */
+
+.footer{
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer img{
+    width: 120px;
+    height: 35px;
+}
+
+.footer h4{
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer a{
+    margin: 0.2rem;
+}
+
+/* Services */
+
+.services{
+    padding: 3rem 0 4rem;
+
+}
+
+.services-flex{
+    display: flex;
+    gap: 20px;
+}
+
+.service-item h4{
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Team */
+.team{
+    padding: 3rem 0 4rem;
+}
+
+.team-flex{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.team img{
+    border-radius: 10px;
+}
+
+/* Contact */
+.contact{
+    padding: 3rem 0 4rem;
+}
+
+.contact p{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group{
+    margin: 2rem 0;
+}
+
+.contact input,
+.contact textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.contact textarea{
+    height: 200px;
+    resize: none;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    outline: none;
+}
+
+.contact .btn{
+    width: 100%;
+}
+
+/* Media Query */
+@media (max-width:768px){
+    .header .header-flex,
+    .footer-flex,
+    .services-flex,
+    .team-flex
+    {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .hero{
+        height: 300px;
+    }
+
+    .hero h2{
+        font-size: 1.8rem;
+    }
+
+    .gallery-item{
+        width: calc(50% - 20px);
+    }
+
+    .footer.footer-flex{
+        text-align: center;
+    }
+}
